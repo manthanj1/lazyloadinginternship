@@ -1,0 +1,9 @@
+<div class="chart-container">
+  <canvas
+    baseChart
+    [data]="chartData"
+    [options]="options"
+    chartType="bar"
+    (chartClick)="onChartClick($event.event, $event.active)">
+  </canvas>
+</div>

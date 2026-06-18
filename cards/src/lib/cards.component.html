@@ -1,0 +1,25 @@
+<div
+  class="card"
+  [ngStyle]="{
+    width: width,
+    height: height,
+    'box-shadow': shadow ? '0 4px 20px rgba(0,0,0,0.2)' : 'none',
+    'border-radius': borderRadius
+  }"
+>
+  <div class="card-header" *ngIf="headerTemplate">
+    <ng-container *ngTemplateOutlet="headerTemplate"></ng-container>
+  </div>
+
+  <div class="card-sub-header" *ngIf="subHeaderTemplate">
+    <ng-container *ngTemplateOutlet="subHeaderTemplate"></ng-container>
+  </div>
+
+  <div class="card-content">
+    <ng-content></ng-content>
+  </div>
+
+  <div class="card-footer" *ngIf="footerTemplate">
+    <ng-container *ngTemplateOutlet="footerTemplate"></ng-container>
+  </div>
+</div>
